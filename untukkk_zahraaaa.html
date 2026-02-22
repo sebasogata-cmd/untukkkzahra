@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untukkk Zahraaaa 💗</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff00cc, #ff66ff, #ff1493);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Efek Glow Neon */
+    .neon {
+      text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #ff4df0,
+        0 0 20px #ff4df0,
+        0 0 40px #ff00cc;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .card {
+      margin: 40px auto;
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px #ff00cc;
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #ff66ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    /* Animasi Fade In */
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Scroll smooth */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="neon">Untukkk Zahraaaa 💗</h1>
+    <p>Website kecil ini dibuat khusus untuk seseorang yang spesial ✨</p>
+  </header>
+
+  <section class="fade">
+    <h2 class="neon">Tentang Kamu</h2>
+    <p>
+      Kamu adalah seseorang yang membuat hari terasa lebih cerah. 
+      Senyummu sederhana tapi punya arti besar. 
+      Kehadiranmu selalu membawa kebahagiaan yang sulit dijelaskan dengan kata-kata.
+    </p>
+  </section>
+
+  <section class="fade">
+    <h2 class="neon">Hal yang Aku Suka</h2>
+    <div class="card">
+      💖 Senyummu yang manis
+    </div>
+    <div class="card">
+      💖 Cara kamu tertawa
+    </div>
+    <div class="card">
+      💖 Perhatian kecil yang berarti besar
+    </div>
+  </section>
+
+  <section class="fade">
+    <h2 class="neon">Pesan Untukmu</h2>
+    <p>
+      Terima kasih sudah menjadi bagian dari cerita ini. 
+      Semoga apa pun yang kamu impikan bisa tercapai, 
+      dan semoga kebahagiaan selalu menyertaimu setiap hari.
+    </p>
+  </section>
+
+  <footer>
+    Dibuat dengan 💗 untuk Zahraaaa
+  </footer>
+
+  <script>
+    // Animasi saat scroll
+    const fades = document.querySelectorAll('.fade');
+
+    function showOnScroll() {
+      fades.forEach(fade => {
+        const top = fade.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) {
+          fade.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showOnScroll);
+    showOnScroll();
+  </script>
+
+</body>
+</html>
+  
